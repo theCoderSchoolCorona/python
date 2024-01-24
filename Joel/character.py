@@ -93,6 +93,12 @@ def fight(character, enemy):
           print("Your enemy has " + str(enemy.currentHP) + "HP")
         if(enemy.currentHP <= 0):
           print("You won the fight with " + str(character.currentHP) + "HP")
+          xpgained = enemy.lvl*10
+          print("hello")
+          character.xp += xpgained
+          print(f"""
+                You gained {xpgained} XP!
+                You have {character.xp} XP""")
           return("Victory")
     else:
       print("You've decided to take the easy way out, you fled the battle!")
